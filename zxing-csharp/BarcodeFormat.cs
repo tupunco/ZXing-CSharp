@@ -44,7 +44,10 @@ namespace com.google.zxing
 		/// <summary>QR Code 2D barcode format. </summary>
 		//UPGRADE_NOTE: Final was removed from the declaration of 'QR_CODE '. "ms-help://MS.VSCC.v80/dv_commoner/local/redirect.htm?index='!DefaultContextWindowIndex'&keyword='jlca1003'"
 		public static readonly BarcodeFormat QR_CODE = new BarcodeFormat("QR_CODE");
-		
+
+        /// <summary>Micro QR Code 2D barcode format. </summary>
+        public static readonly BarcodeFormat MICRO_QR_CODE = new BarcodeFormat("MICRO_QR_CODE");
+
 		/// <summary>DataMatrix 2D barcode format. </summary>
 		//UPGRADE_NOTE: Final was removed from the declaration of 'DATAMATRIX '. "ms-help://MS.VSCC.v80/dv_commoner/local/redirect.htm?index='!DefaultContextWindowIndex'&keyword='jlca1003'"
 		public static readonly BarcodeFormat DATAMATRIX = new BarcodeFormat("DATAMATRIX");

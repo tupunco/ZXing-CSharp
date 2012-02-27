@@ -52,7 +52,7 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <OutputPath>.\</OutputPath>
+    <OutputPath>bin\</OutputPath>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <BaseAddress>285212672</BaseAddress>
     <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
@@ -172,6 +172,34 @@
     <Compile Include="DecodeHintType.cs" />
     <Compile Include="EncodeHintType.cs" />
     <Compile Include="LuminanceSource.cs" />
+    <Compile Include="microqrcode\decoder\BitMatrixParser.cs" />
+    <Compile Include="microqrcode\decoder\DataBlock.cs" />
+    <Compile Include="microqrcode\decoder\DataMask.cs" />
+    <Compile Include="microqrcode\decoder\DecodedBitStreamParser.cs" />
+    <Compile Include="microqrcode\decoder\Decoder.cs" />
+    <Compile Include="microqrcode\decoder\FormatInformation.cs" />
+    <Compile Include="microqrcode\decoder\Mode.cs" />
+    <Compile Include="microqrcode\decoder\Version.cs" />
+    <Compile Include="microqrcode\detector\Detector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="microqrcode\detector\FinderPattern.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="microqrcode\detector\FinderPatternFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="microqrcode\detector\FinderPatternInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="microqrcode\encoder\BitVector.cs" />
+    <Compile Include="microqrcode\encoder\BlockPair.cs" />
+    <Compile Include="microqrcode\encoder\Encoder.cs" />
+    <Compile Include="microqrcode\encoder\MaskUtil.cs" />
+    <Compile Include="microqrcode\encoder\MatrixUtil.cs" />
+    <Compile Include="microqrcode\encoder\MicroQRCode.cs" />
+    <Compile Include="microqrcode\MicroQRCodeReader.cs" />
+    <Compile Include="microqrcode\MicroQRCodeWriter.cs" />
     <Compile Include="MultiFormatReader.cs" />
     <Compile Include="MultiFormatWriter.cs" />
     <Compile Include="multi\ByQuadrantReader.cs" />

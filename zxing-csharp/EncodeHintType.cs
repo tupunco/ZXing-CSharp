@@ -24,7 +24,6 @@ namespace com.google.zxing
 	/// </author>
 	/// <author>www.Redivivus.in (suraj.supekar@redivivus.in) - Ported from ZXING Java Source 
 	/// </author>
-
 	public sealed class EncodeHintType
 	{
 		
@@ -35,7 +34,13 @@ namespace com.google.zxing
 		/// <summary> Specifies what character encoding to use where applicable (type String)</summary>
 		//UPGRADE_NOTE: Final was removed from the declaration of 'CHARACTER_SET '. "ms-help://MS.VSCC.v80/dv_commoner/local/redirect.htm?index='!DefaultContextWindowIndex'&keyword='jlca1003'"
 		public static readonly EncodeHintType CHARACTER_SET = new EncodeHintType();
-		
+
+        /// <summary>
+        /// Micro QR Code ∞Ê±æ–≈œ¢
+        /// int [1,2,3,4]
+        /// </summary>
+        public static readonly EncodeHintType MICROQRCODE_VERSION = new EncodeHintType();
+
 		private EncodeHintType()
 		{
 		}

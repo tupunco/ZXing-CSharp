@@ -13,11 +13,12 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
-using System;
 using ByteMatrix = com.google.zxing.common.ByteMatrix;
 using EAN13Writer = com.google.zxing.oned.EAN13Writer;
 using EAN8Writer = com.google.zxing.oned.EAN8Writer;
+using MicroQRCodeWriter = com.google.zxing.microqrcode.MicroQRCodeWriter;
 using QRCodeWriter = com.google.zxing.qrcode.QRCodeWriter;
+
 namespace com.google.zxing
 {
 	
@@ -54,6 +55,10 @@ namespace com.google.zxing
 			{
 				return new QRCodeWriter().encode(contents, format, width, height, hints);
 			}
+            else if (format == BarcodeFormat.MICRO_QR_CODE)
+            {
+                return new MicroQRCodeWriter().encode(contents, format, width, height, hints);
+            }
 			else
 			{
 				throw new System.ArgumentException("No encoder available for format " + format);

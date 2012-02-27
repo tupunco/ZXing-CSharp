@@ -1,0 +1,7 @@
+*.suo
+/zxing-csharp/bin/*
+/zxing-csharp/obj/*
+/zxing-csharp/*.user
+/TestZXingDemo/bin/*
+/TestZXingDemo/obj/*
+/TestZXingDemo/*.user
