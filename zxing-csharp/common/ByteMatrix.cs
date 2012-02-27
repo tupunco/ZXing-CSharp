@@ -142,27 +142,26 @@ namespace com.google.zxing.common
       sbyte[][] array = this.Array;
       int width = this.Width;
       int height = this.Height;
-      byte[] pixels = new byte[width * height];
-
-      for (int y = 0; y < height; y++)
-      {
-        int offset = y * width;
-        for (int x = 0; x < width; x++)
-        {
-           pixels[offset + x] = array[y][x] == 0 ? BLACK : WHITE;
-        }
-      }
+      byte[] pixels = new byte[width];
 
       //Here create the Bitmap to the known height, width and format
       Bitmap bmp = new Bitmap(width, height, PixelFormat.Format8bppIndexed);
-
       //Create a BitmapData and Lock all pixels to be written
       BitmapData bmpData =
         bmp.LockBits(new Rectangle(0, 0, bmp.Width, bmp.Height),
                      ImageLockMode.WriteOnly, bmp.PixelFormat);
 
-      //Copy the data from the byte array into BitmapData.Scan0
-      Marshal.Copy(pixels, 0, bmpData.Scan0, pixels.Length);
+      for (int y = 0; y < height; y++)
+      {
+          int offset = (y * bmpData.Stride);
+          for (int x = 0; x < width; x++)
+          {
+              pixels[x] = array[y][x] == 0 ? BLACK : WHITE;
+          }
+
+          //Copy the data from the byte array into BitmapData.Scan0
+          Marshal.Copy(pixels, 0, (IntPtr)((int)bmpData.Scan0 + (y * bmpData.Stride)), pixels.Length);
+      }
 
       //Unlock the pixels
       bmp.UnlockBits(bmpData);
