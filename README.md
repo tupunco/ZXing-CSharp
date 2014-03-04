@@ -1,6 +1,6 @@
 ##zxing-csharp
 
-ZXing-csharp project Psupport Micro QR Code encoder&decoder(PURE_BARCODE).
+ZXing-csharp project support Micro QR Code encoder&decoder(PURE_BARCODE).
 
 ###keywords: ZXing, C#, Micro QR Code, QR Code, .NET.
 
