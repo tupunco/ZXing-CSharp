@@ -1,9 +1,11 @@
 ##zxing-csharp
 
-add Micro QRCode encoder&decoder(PURE_BARCODE) 
+ZXing-csharp project Psupport Micro QR Code encoder&decoder(PURE_BARCODE).
 
+###keywords: ZXing, C#, Micro QR Code, QR Code, .NET.
 
-##zxing
+---------------
+##ZXing Introduction
 
 ZXing ("Zebra Crossing")
 
@@ -23,7 +25,7 @@ ZXing (pronounced "zebra crossing") is an open-source, multi-format 1D/2D barcod
 * Aztec ('beta' quality)
 * PDF 417 ('alpha' quality)
 
-[zxing](https://code.google.com/p/zxing)
+[zxing](https://github.com/zxing/zxing)
 
 [ZXing.Net](http://zxingnet.codeplex.com/)
 
